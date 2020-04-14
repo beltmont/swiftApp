@@ -10,9 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var theLabel: UILabel!
+    
+   var count = 0
+    
+    @IBAction func buttonTapped(_ sender: Any) {
+         count = count + 1
+         theLabel.text = "shit!"
+        if count >= 9 {
+            theLabel.text = "fuck"
+            
+        }
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+       
     }
 
     override func didReceiveMemoryWarning() {
